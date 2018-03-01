@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C87D1BD3-CC65-4E14-B9D5-E186AAE4CF8C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Desafio.NET.ApplicationServices</RootNamespace>
+    <AssemblyName>Desafio.NET.ApplicationServices</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.2.1.2\lib\net462\BCrypt.Net-Next.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountApplicationService.cs" />
+    <Compile Include="LoginApplicationService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Desafio.NET.ApplicationServices.Abstractions\Desafio.NET.ApplicationServices.Abstractions.csproj">
+      <Project>{8bc659ed-7c8b-4942-8a39-390c0f6ec007}</Project>
+      <Name>Desafio.NET.ApplicationServices.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Desafio.NET.Domain.Entities\Desafio.NET.Domain.Entities.csproj">
+      <Project>{7f23200a-7fc9-417c-b985-3e088a1740b9}</Project>
+      <Name>Desafio.NET.Domain.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Desafio.NET.Domain.Services.Abstractions\Desafio.NET.Domain.Services.Abstractions.csproj">
+      <Project>{4df08483-7218-4fdd-a032-7583e81d1d57}</Project>
+      <Name>Desafio.NET.Domain.Services.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Desafio.NET.Infraestructure.Common\Desafio.NET.Infraestructure.Common.csproj">
+      <Project>{2871e474-ec02-4229-994a-a385dc7a36ef}</Project>
+      <Name>Desafio.NET.Infraestructure.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Desafio.NET.Repository.Abstractions\Desafio.NET.Repository.Abstractions.csproj">
+      <Project>{b1ab48cc-2fc7-4983-8af0-0d1b122cd5a6}</Project>
+      <Name>Desafio.NET.Repository.Abstractions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

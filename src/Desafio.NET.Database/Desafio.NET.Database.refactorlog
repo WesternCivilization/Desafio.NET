@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="fddf3e87-559b-4430-90e0-b64e8986b6de" ChangeDateTime="02/12/2018 15:40:55">
+    <Property Name="ElementName" Value="[dbo].[User].[LastLogin]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[User]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="LastLogon" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="93dec330-c3d9-4d90-8c59-58c9ab3c9098" ChangeDateTime="02/12/2018 17:35:45">
+    <Property Name="ElementName" Value="[dbo].[Token].[Id_User]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Token]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="User_Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="55f8f69b-5c70-4229-8a45-067d6cb63072" ChangeDateTime="02/12/2018 17:38:15">
+    <Property Name="ElementName" Value="[dbo].[UserPhone].[Ddd]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UserPhone]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="AreaCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7176a6a8-52d1-4b2e-9d91-b6cae386beec" ChangeDateTime="02/14/2018 22:38:21">
+    <Property Name="ElementName" Value="[dbo].[Token].[User_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Token]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7798cc7c-479d-486e-97b0-02fa43deca19" ChangeDateTime="02/14/2018 22:38:29">
+    <Property Name="ElementName" Value="[dbo].[UserPhone].[User_Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[UserPhone]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="861fb9aa-ba69-4350-b6ec-bae81d01732f" ChangeDateTime="02/15/2018 20:42:24">
+    <Property Name="ElementName" Value="[dbo].[Token].[IX_Token_Column]" />
+    <Property Name="ElementType" Value="SqlIndex" />
+    <Property Name="ParentElementName" Value="[dbo].[Token]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[IX_Token_Code]" />
+  </Operation>
+</Operations>

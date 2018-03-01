@@ -1,0 +1,9 @@
+﻿CREATE TABLE [dbo].[Token]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [UserId] BIGINT NOT NULL, 
+    [Code] VARCHAR(MAX) NOT NULL, 
+    [IssuedOn] DATETIME NOT NULL, 
+    [ExpireOn] DATETIME NOT NULL, 
+    CONSTRAINT [FK_Token_User] FOREIGN KEY ([UserId]) REFERENCES [User]([Id])
+)
